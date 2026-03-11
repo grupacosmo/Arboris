@@ -3,9 +3,9 @@
     <q-header>
         <q-toolbar>
             <q-toolbar-title :shrink="true" >
-                DXF viewer
-                <a href="https://www.npmjs.com/package/dxf-viewer">
-                    <q-badge align="top" color="secondary">{{version}}</q-badge>
+                Arboris Lens
+                <a hre="https://github.com/grupacosmo/Arboris">
+                    <q-badge align="top" color="secondary">Beta</q-badge>
                 </a>
             </q-toolbar-title>
 
@@ -16,21 +16,11 @@
                 <template v-slot:before>
                     <q-icon name="folder_open" color="white" />
                 </template>
-                <template v-slot:hint>
-                    <span class="text-white">File is processed locally in your browser</span>
-                </template>
                 <template v-slot:after>
                     <q-btn dense flat label="URL" @click="urlDialog = true"/>
                 </template>
             </q-file>
             <q-btn icon="help" label="About" class="q-ml-lg" @click="aboutDialog = true"></q-btn>
-            <q-space />
-            <q-btn icon="fab fa-github" color="primary" label="dxf-viewer on GitHub" no-caps
-                   class="q-mx-sm github" type="a"
-                   href="https://github.com/vagran/dxf-viewer" />
-            <q-btn icon="fab fa-github" color="primary" label="This example on GitHub" no-caps
-                   class="q-mx-sm github" type="a"
-                   href="https://github.com/vagran/dxf-viewer-example-src" />
         </q-toolbar>
     </q-header>
     <q-page-container>
@@ -44,9 +34,6 @@
                             class="col" @input="_OnFileSelected" @clear="_OnFileCleared">
                         <template v-slot:before>
                             <q-icon name="folder_open" size="xl" />
-                        </template>
-                        <template v-slot:hint>
-                            <span>File is processed locally in your browser</span>
                         </template>
                     </q-file>
                 </div>
